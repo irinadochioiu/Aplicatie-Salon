@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Interfata_Client.Pagina_Programare">
+    <ContentPage.Content xmlns:local="clr-namespace:ProiectMediiDeProgramare.Behaviors">
+        <StackLayout Style="{StaticResource stackLayout}">
+            <StackLayout Style="{StaticResource stackLayout}">
+                <Label Style="{StaticResource labelContinutBold}" FontSize="20" Text="Adauga datele personale"/>
+                <Editor x:Name="editorClientNume" Style="{StaticResource editor}" Placeholder="Nume">
+                    <Editor.Behaviors>
+                        <local:ValidationNotNullBehavior/>
+                    </Editor.Behaviors>
+                </Editor>
+                <Editor x:Name="editorClientPrenume" Style="{StaticResource editor}" Placeholder="Prenume">
+                    <Editor.Behaviors>
+                        <local:ValidationNotNullBehavior/>
+                    </Editor.Behaviors>
+                </Editor>
+            </StackLayout>
+            <StackLayout Style="{StaticResource stackLayout}">
+                <Label Style="{StaticResource labelContinutBold}" FontSize="20" Text="Adauga datele programarii"/>
+                <StackLayout Style="{StaticResource stackLayoutOrizontal}">
+                    <Label Style="{StaticResource labelContinut}" Text="Serviciu:"/>
+                    <Label x:Name="lblServiciu" Style="{StaticResource labelContinut}"/>
+                </StackLayout>
+                <StackLayout Style="{StaticResource stackLayoutOrizontal}">
+                    <Label Style="{StaticResource labelContinut}" Text="Angajat:"/>
+                    <Label Style="{StaticResource labelContinut}" Text="{Binding Nume}"/>
+                    <Label Style="{StaticResource labelContinut}" Text="{Binding Prenume}"/>
+                </StackLayout>
+                <DatePicker x:Name="datePicker">
+                    <DatePicker.Behaviors>
+                        <local:ValidationZiProgramareBehavior/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+                <Label x:Name="labelEroare"/>
+                <Picker x:Name="picker" Title="Ora"/>
+            </StackLayout>
+            <Button x:Name="btnSalveaza" Style="{StaticResource buton_lung}" Text="Programeaza-te" Clicked="btnSalveaza_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

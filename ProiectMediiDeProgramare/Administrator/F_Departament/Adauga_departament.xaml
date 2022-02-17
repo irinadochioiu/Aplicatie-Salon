@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.F_Departament.Adauga_departament">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource stackLayout}">
+            <Label Style="{StaticResource labelContinut}" Text="Adauga datele noului departament"/>
+            <Editor x:Name="editorDepartamentDenumire" Text="{Binding Denumire}" Style="{StaticResource editor}" Placeholder="Denumire"/>
+            <Editor x:Name="editorDepartamentDescriere" Text="{Binding Descriere}" Style="{StaticResource editor}" Placeholder="Descriere"/>
+            <Button x:Name="btnAdaugaDepartament" Style="{StaticResource buton_lung}" Text="Adauga" Clicked="btnAdaugaDepartament_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

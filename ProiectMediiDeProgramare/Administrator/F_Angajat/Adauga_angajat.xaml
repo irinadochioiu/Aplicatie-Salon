@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Adauga_angajat">
+    <ContentPage.Content xmlns:local="clr-namespace:ProiectMediiDeProgramare.Behaviors">
+        <StackLayout Style="{StaticResource stackLayout}">
+            <Label Style="{StaticResource labelContinut}" Text="Adauga datele noului angajat"/>
+            <Editor x:Name="editorAngajatNume" Text="{Binding Nume}" Style="{StaticResource editor}" Placeholder="Nume">
+                <Editor.Behaviors>
+                    <local:ValidationNameBehavior/>
+                </Editor.Behaviors>
+            </Editor>
+            <Editor x:Name="editorAngajatPrenume" Text="{Binding Prenume}" Style="{StaticResource editor}" Placeholder="Prenume">
+                <Editor.Behaviors>
+                    <local:ValidationNotNullBehavior/>
+                </Editor.Behaviors>
+            </Editor>
+            <Editor x:Name="editorAngajatDescriere" Text="{Binding Descriere}" Style="{StaticResource editor}" Placeholder="Descriere">
+                <Editor.Behaviors>
+                    <local:ValidationNotNullBehavior/>
+                </Editor.Behaviors>
+            </Editor>
+            <Editor x:Name="editorAngajatImagine" Text="{Binding Poza}" Style="{StaticResource editor}" Placeholder="Imagine"/>
+            <Picker x:Name="pickerAngajatDepartament" ItemDisplayBinding="{Binding Denumire}" Title="Departament"/>
+            <Label Style="{StaticResource labelContinut}" Text="Program. Alegeti intervalul orar"></Label>
+            <Picker x:Name="pickerAngajatInterval"/>
+            <Button x:Name="btnAdaugaAngajat" Style="{StaticResource buton_lung}" Text="Adauga" Clicked="btnAdaugaAngajat_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

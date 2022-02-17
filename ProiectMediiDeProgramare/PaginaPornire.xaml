@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.PaginaPornire">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Alegeti rolul:" Style="{StaticResource labelTitluContinut}"/>
+            <Button x:Name="btnAdmin" Text="Administrator" Style="{StaticResource buton_lung}" Clicked="btnAdmin_Clicked"/>
+            <Button x:Name="btnClient" Text="Client" Style="{StaticResource buton_lung}" Clicked="btnClient_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

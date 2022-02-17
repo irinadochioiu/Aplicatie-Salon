@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.F_Programare.Programare_crud">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listViewProgramari" HasUnevenRows="True" ItemSelected="listViewProgramari_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <StackLayout>
+                                    <Label Style="{StaticResource labelContinutBold}" Text="{Binding Date}"/>
+                                    <Label Style="{StaticResource labelContinut}" Text="{Binding Ora}"/>
+                                    <Label Style="{StaticResource labelContinut}" Text="{Binding ClientId}"/>
+                                    <Label Style="{StaticResource labelContinut}" Text="{Binding AngajatId}"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

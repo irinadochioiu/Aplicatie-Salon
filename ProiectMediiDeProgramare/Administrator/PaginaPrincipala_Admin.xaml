@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.PaginaPrincipala_Admin">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Alegeti tabela:" Style="{StaticResource labelTitluContinut}"/>
+            <Button x:Name="btnAngajati" Text="Angajati" Style="{StaticResource buton_lung}" Clicked="btnAngajati_Clicked"/>
+            <Button x:Name="btnDepartamente" Text="Departamanete" Style="{StaticResource buton_lung}" Clicked="btnDepartamente_Clicked"/>
+            <Button x:Name="btnProgramari" Text="Programari" Style="{StaticResource buton_lung}" Clicked="btnProgramari_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

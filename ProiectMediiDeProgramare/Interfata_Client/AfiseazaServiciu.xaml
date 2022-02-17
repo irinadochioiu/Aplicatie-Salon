@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Interfata_Client.AfiseazaServiciu">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource stackLayout}">
+            <Label Text="{Binding Denumire}" Style="{StaticResource labelTitluContinut}"/>
+            <Label Text="{Binding Descriere}" Style="{StaticResource labelContinut}"></Label>
+            <Label Text="Angajati" FontSize="20" Style="{StaticResource labelContinutBold}"></Label>
+            <Label Text="Selecteaza pentru a face o programare" FontSize="16" Style="{StaticResource labelContinut}"></Label>
+            <ListView x:Name="listViewAngajati" HasUnevenRows="True" ItemSelected="listViewAngajati_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Poza}" WidthRequest="100" VerticalOptions="Start"/>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Style="{StaticResource labelContinutBold}" FontSize="18" Text="{Binding Nume}"/>
+                                            <Label Style="{StaticResource labelContinutBold}" FontSize="18" Text="{Binding Prenume}"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Style="{StaticResource labelContinut}" FontSize="18" Text="{Binding Descriere}"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="Program:"></Label>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding OraInceput}"/>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="-"/>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding OraSfarsit}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.PaginaPrincipala">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource stackLayoutHeader}">
+            <Label Style="{StaticResource labelHeader}"  Text="Beauty Salon"></Label>
+            <Label Style="{StaticResource labelTitluContinut}" Text="Bine ai venit!"/>
+            <StackLayout Style="{StaticResource stackLayout}">
+               <Label Style="{StaticResource labelContinutBold}" FontSize="20" Text="Serviciile noastre"/>
+                <ListView x:Name="listViewDepartamente" HasUnevenRows="True" ItemSelected="listViewDepartamente_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <StackLayout>
+                                        <Label Style="{StaticResource labelContinutBold}" Text="{Binding Denumire}"/>
+                                        <Label Style="{StaticResource labelContinut}" Text="{Binding Descriere}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

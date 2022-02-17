@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Angajat_crud">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource stackLayout}">
+            <Button Text="Adauga angajat" Style="{StaticResource buton_lung}" x:Name="btnAdaugaAngajat" Clicked="btnAdaugaAngajat_Clicked"></Button>
+            <ListView x:Name="listViewAngajati" HasUnevenRows="True" ItemSelected="listViewAngajati_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Poza}" WidthRequest="90" VerticalOptions="Start"/>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Style="{StaticResource labelContinut}" Text="{Binding Nume}"/>
+                                            <Label Style="{StaticResource labelContinut}" Text="{Binding Prenume}"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding Descriere}"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="Departament:"></Label>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding DepartamentId}"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="Interval orar:"></Label>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding OraInceput}"/>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="-"/>
+                                                <Label Style="{StaticResource labelContinut}" FontSize="15" Text="{Binding OraSfarsit}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

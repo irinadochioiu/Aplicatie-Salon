@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.F_Angajat.Editeaza_Angajat">
+    <ContentPage.Content xmlns:local="clr-namespace:ProiectMediiDeProgramare.Behaviors">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Style="{StaticResource labelTitluContinut}" FontSize="19" VerticalOptions="Center" Margin="10" Text="Angajatul cu ID:"/>
+                <Label Style="{StaticResource labelTitluContinut}" FontSize="19" VerticalOptions="Center" Margin="10" Text="{Binding Id}"/>
+                <Button x:Name="btnStergeAngajat" Style="{StaticResource buton}" WidthRequest="150" HorizontalOptions="EndAndExpand" Text="Sterge" Clicked="btnStergeAngajat_Clicked"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Nume:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorAngajatNume" Margin="0" FontSize="15" Text="{Binding Nume}" Style="{StaticResource editor}" Placeholder="{Binding Nume}">
+                    <Editor.Behaviors>
+                        <local:ValidationNotNullBehavior/>
+                    </Editor.Behaviors>
+                </Editor>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Prenume:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorAngajatPrenume" Text="{Binding Prenume}" FontSize="15" Style="{StaticResource editor}" Placeholder="{Binding Prenume}">
+                    <Editor.Behaviors>
+                        <local:ValidationNotNullBehavior/>
+                    </Editor.Behaviors>
+                </Editor>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Descriere:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorAngajatDescriere" FontSize="15" Text="{Binding Descriere}" Style="{StaticResource editor}" Placeholder="{Binding Descriere}"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Poza:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorAngajatImagine" FontSize="15" Text="{Binding Poza}" Style="{StaticResource editor}" Placeholder="{Binding Poza}"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="ID Departament:" Style="{StaticResource labelContinutBold}"/>
+                <Picker x:Name="pickerAngajatDepartament" ItemDisplayBinding="{Binding Denumire}" Title="{Binding DepartamentId}"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Interval Orar:" Style="{StaticResource labelContinutBold}"/>
+                <Picker x:Name="pickerAngajatInterval"/>
+            </StackLayout>
+            <Button x:Name="btnSalveazaAngajat" Style="{StaticResource buton}" Text="Actualizeaza" Clicked="btnSalveazaAngajat_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

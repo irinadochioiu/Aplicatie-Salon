@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.F_Departament.Editeaza_departament">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Style="{StaticResource labelTitluContinut}" FontSize="19" VerticalOptions="Center" Margin="10" Text="Departamentul cu ID:"/>
+                <Label Style="{StaticResource labelTitluContinut}" FontSize="19" VerticalOptions="Center" Margin="10" Text="{Binding Id}"/>
+                <Button x:Name="btnStergeDepartament" Style="{StaticResource buton}" WidthRequest="150" HorizontalOptions="EndAndExpand" Text="Sterge" Clicked="btnStergeDepartament_Clicked"/>
+            </StackLayout>
+            <ListView x:Name="listaAngajati">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Nume}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Margin="10">
+                <Label Text="Denumire:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorDepartamentDenumire" Margin="0" FontSize="15" Text="{Binding Denumire}" Style="{StaticResource editor}" Placeholder="{Binding Denumire}"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Descriere:" Style="{StaticResource labelContinutBold}"/>
+                <Editor x:Name="editorDepartamentDescriere" Text="{Binding Descriere}" FontSize="15" Style="{StaticResource editor}" Placeholder="{Binding Descriere}"/>
+            </StackLayout>
+            <Button x:Name="btnSalveazaDepartament" Style="{StaticResource buton}" Text="Actualizeaza" Clicked="btnSalveazaDepartament_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

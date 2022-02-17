@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="ProiectMediiDeProgramare.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="stackLayout" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+            <Style x:Key="stackLayoutOrizontal" TargetType="StackLayout" BasedOn="{StaticResource stackLayout}">
+                <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+            <Style x:Key="stackLayoutHeader" TargetType="StackLayout" BasedOn="{StaticResource stackLayout}">
+                <Setter Property="Padding" Value="0,0,0,5"/>
+            </Style>
+            <Style x:Key="labelHeader" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="Font"/>
+            </Style>
+            <Style x:Key="buton" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Font2"/>
+                <Setter Property="Margin" Value="5"/>
+                <Style.Triggers>
+                    <Trigger Property="Button.IsPressed" Value="True" TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="White"/>
+                        <Setter Property="TextColor" Value="Black"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="buton_lung" TargetType="Button" BasedOn="{StaticResource buton}">
+                <Setter Property="WidthRequest" Value="500"/>
+            </Style>
+            <Style x:Key="labelContinut" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Font2"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style x:Key="labelTitluContinut" TargetType="Label" BasedOn="{StaticResource labelContinut}">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="Font1"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style x:Key="editor" TargetType="Editor">
+                <Setter Property="AutoSize" Value="TextChanges"/>
+            </Style>
+            <Style x:Key="labelContinutBold" TargetType="Label">
+                <Setter Property="FontFamily" Value="Font1"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="picker" TargetType="Picker">
+                
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="WidthRequest" Value="150"/>
+            </Style>
+            <Style x:Key="labelMic" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Font2"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

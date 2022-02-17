@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiDeProgramare.Administrator.F_Programare.Vizualizeaza_Programare">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource stackLayout}">
+            <Label Style="{StaticResource labelContinutBold}" Text="ID Programare"></Label>
+            <Label Style="{StaticResource labelContinut}" Text="{Binding Id}"></Label>
+            <Label Style="{StaticResource labelContinutBold}" Text="Data programare"></Label>
+            <Label Style="{StaticResource labelContinut}" Text="{Binding Date}"></Label>
+            <Label Style="{StaticResource labelContinutBold}" Text="Ora programare"></Label>
+            <Label Style="{StaticResource labelContinut}" Text="{Binding Ora}"></Label>
+            <Label Style="{StaticResource labelContinutBold}" Text="Nume Client"></Label>
+            <Label x:Name="lblNumeClient" Style="{StaticResource labelContinut}"></Label>
+            <Label x:Name="lblPrenumeClient" Style="{StaticResource labelContinut}"></Label>
+            <Label Style="{StaticResource labelContinutBold}" Text="Nume Angajat"></Label>
+            <Label x:Name="lblPrenumeAngajat" Style="{StaticResource labelContinut}"></Label>
+            <Label x:Name="lblNumeAngajat" Style="{StaticResource labelContinut}"></Label>
+            <Button x:Name="btnSterge" Style="{StaticResource buton_lung}" Text="Sterge programarea" Clicked="btnSterge_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
